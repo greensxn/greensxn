@@ -236,10 +236,14 @@ p {
 }
 
 .box1 {
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(80px);
   -webkit-backdrop-filter: blur(80px);
+  height: calc(100vh + 160px);
+}
+
+.box2 {
+  background-color: rgba(0, 0, 0, 0.4);
   height: calc(100vh + 160px);
 }
 
@@ -451,7 +455,6 @@ p {
   left: 20%;
   margin: 50px 0;
   width: 75%;
-  z-index: 0;
 }
 
 .information > h1 {
@@ -462,6 +465,20 @@ p {
   height: 100%;
   overflow: hidden;
   z-index: 1;
+}
+
+.scratching {
+  position: fixed;
+  content: "";
+  background-image: url("https://i.pinimg.com/originals/6a/56/8d/6a568d1112d21494cc12cd8fdbf65c11.png");
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/704/612/871/red-black-geological-phenomenon-sky-wallpaper-preview.jpg");
+  mix-blend-mode: color-dodge;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  z-index: 0;
 }
 
 .card {
@@ -509,6 +526,7 @@ p {
   padding: 15px 0;
   position: relative;
   border-bottom: 1px solid white;
+  z-index: 1;
 }
 
 .card-info .social li {
@@ -536,6 +554,7 @@ p {
   -webkit-backdrop-filter: blur(30px);
   transition: 0.3s;
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1;
 }
 
 .text-info h1 {
@@ -575,16 +594,28 @@ p {
   transition: 0.2s;
 }
 
-.btn:hover {
+/* .btn:hover {
   color: #669aed;
   background-color: transparent;
   border: 2px solid #669aed;
+} */
+
+.btn:hover {
+  color: white;
+  background-color: transparent;
+  border: 2px solid #9a000d;
 }
 
-.btn.darkpink {
+/* .btn.darkpink {
   color: #669aed;
   background-color: transparent;
   border: 2px solid #669aed;
+} */
+
+.btn.darkpink {
+  color: white;
+  background-color: transparent;
+  border: 2px solid #9a000d;
 }
 
 .btn.darkpink:hover {
@@ -675,6 +706,22 @@ footer p {
 
 #mainPage .navigation {
   top: 20px;
+}
+
+#mainPage .active > a,
+#mainPage .active:after,
+#mainPage .active > div,
+#mainPage .active:before {
+  color: #de0012 !important;
+}
+
+#mainPage .headerTabs > ul > li.active > :first-child:before,
+#mainPage .headerTabs ul li ul li:before {
+  color: #9a000d !important;
+}
+
+#mainPage .link:after {
+  background-color: #de0012 !important;
 }
 
 /* ICONS */
@@ -848,8 +895,9 @@ footer p {
   }
 
   #mainPage header {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
     box-shadow: none;
+    backdrop-filter: none;
   }
 
   #mainPage header .menuNavBtn {
@@ -858,6 +906,20 @@ footer p {
 
   #mainPage header > a {
     display: none;
+  }
+
+  header {
+    box-shadow: none;
+    background-color: transparent;
+    backdrop-filter: none;
+    /* backdrop-filter: blur(30px); */
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    height: 30px;
+    padding-top: 30px;
+  }
+
+  header img {
+    height: 40px;
   }
 
   .navigation {
@@ -897,7 +959,7 @@ footer p {
 
   .card {
     padding: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.85);
     color: white;
   }
 
@@ -952,7 +1014,7 @@ footer p {
     padding: 50px 0;
     width: 100%;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.85);
     padding-bottom: 200px;
   }
 
@@ -979,7 +1041,7 @@ footer p {
   }
 
   .card-info .social {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.85);
     backdrop-filter: none;
     padding: 20px 0;
     border-bottom: none;
@@ -996,5 +1058,11 @@ footer p {
     left: auto;
     right: 6%;
     top: calc(99% - 50px);
+  }
+
+  .navigationBlock {
+    top: 70px;
+    backdrop-filter: none;
+    background: linear-gradient(0deg, black, transparent);
   }
 }

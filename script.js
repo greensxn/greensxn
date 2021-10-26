@@ -49,9 +49,6 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 75) {
     if (btnUp) btnUp.style.display = "block";
 
-    header.style.height = "30px";
-    headerLogoText.style.display = "none";
-
     if (window.innerWidth > mobileSize) {
       $(".navForPC").show();
       $(".tabsheader").show();
@@ -60,11 +57,14 @@ window.addEventListener("scroll", () => {
       $(".tabsheader").hide();
     }
   } else {
-    if (window.innerWidth > mobileSize) headerLogoText.style.display = "block";
+    if (window.innerWidth > mobileSize) {
+      header.style.height = "50px";
+      headerLogoText.style.display = "block";
+    }
 
     if (btnUp) btnUp.style.display = "none";
 
-    header.style.height = "50px";
+    headerLogoText.style.display = "none";
 
     $(".navForPC").hide();
     $(".tabsheader").hide();
