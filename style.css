@@ -229,13 +229,12 @@ p {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 30% 70%;
   position: relative;
   background-color: #1a1a1a;
 }
 
 .box1 {
+  width: 30%;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(80px);
   -webkit-backdrop-filter: blur(80px);
@@ -243,8 +242,8 @@ p {
 }
 
 .box2 {
+  width: 70%;
   background-color: rgba(0, 0, 0, 0.4);
-  height: calc(100vh + 160px);
 }
 
 .navigation {
@@ -544,9 +543,10 @@ p {
 }
 
 .text-info {
-  padding: 20px 50px 20px 20px;
+  padding: 20px 50px 20px 50px;
   width: 50%;
   height: 100%;
+  margin-left: 1px;
   background-color: rgba(95, 0, 3, 0.04);
   color: white;
   position: relative;
@@ -659,7 +659,6 @@ p {
 }
 
 .btnUp a {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -912,8 +911,6 @@ footer p {
     box-shadow: none;
     background-color: transparent;
     backdrop-filter: none;
-    /* backdrop-filter: blur(30px); */
-    /* background-color: rgba(255, 255, 255, 0.1); */
     height: 30px;
     padding-top: 30px;
   }

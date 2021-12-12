@@ -50,6 +50,14 @@ window.addEventListener("scroll", () => {
     if (btnUp) btnUp.style.display = "block";
 
     if (window.innerWidth > mobileSize) {
+      // for desktop
+      headerLogoText.style.display = "none";
+    } else {
+      // for mobile
+      headerLogoText.style.display = "none";
+    }
+
+    if (window.innerWidth > mobileSize) {
       $(".navForPC").show();
       $(".tabsheader").show();
     } else {
@@ -58,13 +66,15 @@ window.addEventListener("scroll", () => {
     }
   } else {
     if (window.innerWidth > mobileSize) {
-      header.style.height = "50px";
+      // for desktop
       headerLogoText.style.display = "block";
+    } else {
+      // for mobile
+      header.style.height = "50px";
+      headerLogoText.style.display = "none";
     }
 
     if (btnUp) btnUp.style.display = "none";
-
-    headerLogoText.style.display = "none";
 
     $(".navForPC").hide();
     $(".tabsheader").hide();
@@ -72,6 +82,12 @@ window.addEventListener("scroll", () => {
 });
 
 window.onresize = function (event) {
+  $("#mainPage").ready(function () {
+    $(".grid").css("background", "url(../img/mainback.gif)");
+    $(".grid").css("background-attachment", "fixed");
+    $(".grid").css("background-position", "700px 50px");
+  });
+
   if (window.scrollY > 75) {
     if (window.innerWidth > mobileSize) {
       $(".navForPC").show();
