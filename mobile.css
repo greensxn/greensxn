@@ -1,0 +1,16 @@
+.projects-container figure img {
+    border:none;
+}
+
+.detal-information article>a {
+    margin-top: 75px;
+}
+
+.sinoptik {
+    transform: rotateZ(-5deg);
+}
+
+.sinoptik:before {
+    top: 0;
+    left: 130px;
+}
