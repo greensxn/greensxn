@@ -41,10 +41,3 @@
   <img align="center" src="https://github.com/techoji/techoji/blob/master/img/resume/postgresql.png" width="30px"/>
   <img align="center" src="https://github.com/techoji/techoji/blob/master/img/resume/firebase.svg" width="30px"/>
 </div>
-
-</br>
-</br>
-
-<div align="center">
-  <img src="https://github.com/thepiyushmalhotra/thepiyushmalhotra/blob/output/github-contribution-grid-snake.svg"/>
-</div>
